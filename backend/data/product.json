@@ -1,0 +1,35 @@
+[    {
+        "name" : "pipa",
+        "price" : 40 ,
+        "description" : "yalayachababyalayachababyalayachababyalayachababyalayachababyalayachababyalayachababyalayachababyalayachabab",
+        "ratings" : 4.5 ,
+        "images" : [ {
+        "public_id" : "products/kfeoizotjgolxckdlgkpe",
+        "url" : "httppppppp"
+    }
+],
+"category" : "Electronics", 
+"seller" : "mamo",
+"stock" : 40 ,
+"numOfReviews" : 30,
+"reviews" : []
+},
+
+{
+    "name" : "pipal mama",
+    "price" : 120 ,
+    "description" : "yalayachababyalayachababyalayfffffffachababyalayachababyalayachababyalayachababyalayachababyalayachababyalayachabab",
+    "ratings" : 3.5 ,
+    "images" : [ {
+    "public_id" : "products/kfeoizotjfdsfdfsgolxckdlgkpe",
+    "url" : "httpppdfkdsjgksjgkjfkjkgjkpppp"
+}
+],
+"category" : "Electronics", 
+"seller" : "l9ouwaa",
+"stock" : 50 ,
+"numOfReviews" : 60,
+"reviews" : []
+}
+]
+

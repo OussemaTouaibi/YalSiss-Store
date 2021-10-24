@@ -1,0 +1,228 @@
+.navbar {
+    background: linear-gradient(90deg,rgb(0,48,96) 0% ,rgb(2, 2, 2) 100%);
+    height: 80px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+  }
+ 
+  .navbar-logo {
+    color: #fff;
+    justify-self: start;
+    margin-bottom: 20px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 1.8rem;
+    padding: 0.5rem 1rem
+    
+    
+  }
+  .ttx{
+  font-family: 'Brush Script MT';
+  font-size: 100%;
+}
+
+  @media screen and (max-width: 700px){
+    .navbar-logo {
+margin-top: -3%;
+margin-left: 22%;
+
+    
+    }
+  }
+
+  .navbar-logo:hover {
+    text-decoration: none;
+  }
+  
+  .fa-firstdraft {
+    margin-left: 0.5rem;
+    font-size: 1.6rem;
+  }
+  
+  .nav-menu {
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    grid-gap: 10px;
+    list-style: none;
+    text-align: center;
+    width: 70vw;
+    justify-content: end;
+    margin-right: 2rem;
+    margin-bottom: 0.6rem;
+  }
+  
+  .nav-item {
+    display: flex;
+    align-items: center;
+    height: 80px;
+  }
+  
+  .nav-links {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+  }
+  
+  .nav-links:hover {
+    background-color: #003060;
+    border-radius: 4px;
+    transition: all 0.2s ease-out;
+    text-decoration: none;
+  }
+  
+  .fa-bars {
+    color: #fff;
+  }
+  
+  .nav-links-mobile {
+    display: none;
+  }
+  
+  .menu-icon {
+    display: none;
+
+  }
+
+  
+  @media screen and (max-width: 960px) {
+    .NavbarItems {
+      position: relative;
+    }
+    .nav-menu {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      height: 60vh;
+      position: absolute;
+      top: 80px;
+      left: -100%;
+      opacity: 1;
+      transition: all 0.5s ease;
+      overflow-y: scroll;
+      cursor: pointer;
+   
+    }
+  
+    .nav-menu.active {
+      background: #000000;
+      left: 0;
+      opacity: 1;
+      transition: all 0.5s ease;
+      z-index: 7;
+      overflow-y: scroll;
+      display: flex;
+      cursor: pointer;
+    }
+  
+    .nav-links {
+      text-align: left;
+      margin-bottom: 39%;
+      padding: 2rem;
+      width: 100%;
+      display: table;
+      overflow-y: scroll;
+      cursor: pointer;
+
+    }
+  
+    .nav-links:hover {
+      background-color: #003060;
+      border-radius: 0;
+  
+    }
+  
+    .navbar-logo {
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translate(25%, 50%);
+    }
+  
+    .menu-icon {
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      transform: translate(-100%, 60%);
+      font-size: 1.8rem;
+      cursor: pointer;
+      margin-right: 80%;
+    }
+  
+    .fa-times {
+      color: #fff;
+      font-size: 2rem;
+    }
+  
+    .nav-links-mobile {
+      display: block;
+      text-align: center;
+      padding: 1.5rem;
+      margin: 2rem auto;
+      border-radius: 4px;
+      width: 80%;
+      background: #1888ff;
+      text-decoration: none;
+      color: #fff;
+      font-size: 1.5rem;
+    }
+   
+    .nav-links-mobile:hover {
+      background: #fff;
+      color: #1888ff;
+      transition: 250ms;
+    }
+  
+    button {
+      display: none;
+    }
+    .sig {
+      display: none;
+    }
+  }
+
+  .sig {
+    margin-bottom: 20px;
+    padding: 0.5rem 0.4rem;
+
+  }
+  .avatar-nav {
+    margin-right: 0.6rem;
+    height: 2.2rem;
+    width: 2.2rem;
+  }
+  .avatar-navv {
+    
+    margin-left: 26%;
+    width: 40%;
+    display: flex;
+  }
+
+
+  .ml150{
+    margin-left: 80%;
+    margin-top: 1rem;
+  }
+  .ml155{
+    margin-left: 61.8%;
+  }
+
+  .mb{
+    margin-bottom: 30%;
+  }
+
+  div.scrollmenu {
+    background-color: #333;
+    overflow: auto;
+    white-space: nowrap;
+  }
+
+
+  .ls{
+    margin-left: 80%;
+    margin-top: 1rem;
+    font-size: 15px;
+    text-decoration:none;
+    color: white;
+  }

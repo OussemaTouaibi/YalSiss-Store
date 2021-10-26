@@ -57,14 +57,14 @@ const logoutHandler = () => {
 
     return(
     <Fragment>
-
+        
         <nav className='navbar'>
-            <div to ='/'
+            <Link to ='/'
             className='navbar-logo'>
                 <h4 className="ttx">
               YalSiss
               </h4>
-            </div>
+            </Link>
 
             <MediaQuery minWidth={1224}>
             <div className='menu-icon' onClick={handleClick}>
@@ -239,7 +239,7 @@ const logoutHandler = () => {
                              className="rounded-circle"
                          />
                      </figure>
-                     <span>{user && user.name}</span>
+                     <span style={{color:"white"}}>{user && user.name}</span>
                  </Link>
                  <div className="dropdown-menu ml155"  aria-labelledby="dropDownMenuButton" >
                      

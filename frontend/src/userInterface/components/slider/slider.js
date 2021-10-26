@@ -23,7 +23,7 @@ const ImageSlider = ({ product, col }) => {
                     </div>
                 
                     <div className="details">
-                    <h2><Link to= {`/product/${product._id}`} style={{color:'black'}}>{product.name}</Link>
+                    <h2><Link to= {`/product/${product._id}`} style={{color:'black' ,fontSize:'16px'}}>{product.name}</Link>
                        <span className="job-title">{product.price}DT</span></h2>
                     </div>
                 </div>

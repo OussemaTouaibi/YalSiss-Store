@@ -27,6 +27,7 @@ import OrderDetails from './userInterface/components/order/OrderDetails';
 
 
 
+
 // Auth or Users Imports
 import LogIn from './userInterface/user/login/login';
 import Signup from './userInterface/user/signup/signup';
@@ -101,6 +102,7 @@ function App() {
         <ProtectedRoutes exact path='/order/confirm' component={ConfirmOrder} />
         <ProtectedRoutes exact path='/orders/me' component={ListOrders} />
         <ProtectedRoutes exact path='/order/:id' component={OrderDetails} />
+
 
         <ProtectedRoutes exact path='/success' component={OrderSuccess} />
 

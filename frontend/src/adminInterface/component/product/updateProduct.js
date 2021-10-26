@@ -12,60 +12,57 @@ import { UPDATE_PRODUCT_RESET } from '../../../constants/productConstants'
 import './productList.scss'
 import Select from 'react-select';
 
+
 const UpdateProduct = ({ match, history }) => {
+
+
+    const options = [
+        {label:'Black', value:'Black'},
+        {label:'Brown', value:'Brown'},
+        {label:'Blue', value:'Blue'},
+        {label:'Pink', value:'pink'},
+        {label:'Yellow', value:'Yellow'},
+        {label:'Red', value:'Red'},
+    ]
+    const optionss = [
+        {label:'S', value:'S'},
+        {label:'M', value:'M'},
+        {label:'L', value:'L'},
+        {label:'XL', value:'XL'},
+        {label:'XXL', value:'XXL'},
+        {label:'XXXL', value:'XXXL'},
+        {label:'38', value:'38'},
+        {label:'39', value:'39'},
+        {label:'40', value:'40'},
+        {label:'41', value:'42'},
+        {label:'42', value:'42'},
+        {label:'43', value:'43'},
+        {label:'44', value:'44'},
+        {label:'45', value:'45'},
+    ]
 
 
     const { categories } = useSelector(state => state.allCategories);
 
-    
-const options = [
-    {label:'Black', value:'Black'},
-    {label:'Brown', value:'Brown'},
-    {label:'Blue', value:'Blue'},
-    {label:'Pink', value:'pink'},
-    {label:'Yellow', value:'Yellow'},
-    {label:'Red', value:'Red'},
-]
-const optionss = [
-    {label:'S', value:'S'},
-    {label:'M', value:'M'},
-    {label:'L', value:'L'},
-    {label:'XL', value:'XL'},
-    {label:'XXL', value:'XXL'},
-    {label:'XXXL', value:'XXXL'},
-    {label:'38', value:'38'},
-    {label:'39', value:'39'},
-    {label:'40', value:'40'},
-    {label:'41', value:'42'},
-    {label:'42', value:'42'},
-    {label:'43', value:'43'},
-    {label:'44', value:'44'},
-    {label:'45', value:'45'},
-]
-   
-    const [colors, setColors] = useState([]);
-    const [sizes, setSizes] = useState([]);
-   
+    const [subOptions, setSubOptions] = useState([]);
 
     const [name, setName] = useState('');
     const [price, setPrice] = useState(0);
     const [description, setDescription] = useState('');
     const [category, setCategory] = useState('');
-    const [categoriess, setCategoriess] = useState([]);
     const [subs, setSubs] = useState('');
+
+    const [categoriess, setCategoriess] = useState([]);
+    const [colors, setColors] = useState([]);
+    const [sizes, setSizes] = useState([]);
     const [stock, setStock] = useState(0);
     const [seller, setSeller] = useState('');
     const [oldImages, setOldImages] = useState([]);
     const [images, setImages] = useState([]);
     const [imagesPreview, setImagesPreview] = useState([]);
 
-    const initialState = {
-        colors: ["Black", "Brown" ,"White", "Blue", "red", "pink", "yellow"],
-        size: ["S", "M" ,"L", "XL", "XXL", "XXXL", "36","37","38","39","40","41","42","43","44","45"],
-        sub: [],   
-      };
-      
-    
+ 
+  
 
 
    
@@ -89,9 +86,6 @@ const optionss = [
             setSeller(product.seller);
             setStock(product.stock);
             setOldImages(product.images);
-           setSizes(product.size);
-           setColors( product.colors);
-           setSubs(product.sub);
         }
 
         if (error) {
@@ -122,9 +116,16 @@ const optionss = [
         formData.set('price', price);
         formData.set('description', description);
         formData.set('category', category);
-        formData.set('colors', colors);
-        formData.set('sizes', sizes);
-        formData.set('sub', subs);
+        sizes.forEach(size => {
+            formData.append('sizes', size);
+         })
+
+        colors.forEach(color => {
+            formData.append('colors', color);
+         })
+
+        
+           formData.append('subs', subs);
         formData.set('stock', stock);
         formData.set('seller', seller);
 
@@ -158,7 +159,7 @@ const optionss = [
     }
 
 
-    const [subOptions, setSubOptions] = useState([]);
+    
 
     const [showSub, setShowSub] = useState(false);
 
@@ -166,11 +167,11 @@ const optionss = [
         
         e.preventDefault();
         console.log('CLICKED CATEGORY', e.target.value);
-        setCategoriess({sub:[], category: e.target.value });
+        setCategoriess({subs:[], category: e.target.value });
         setCategory(e.target.value);
         getCategorySubs(e.target.value).then(res => {
             setSubOptions(res.data);
-            
+        
             console.log('SUBS OPTIONS ON  CATEGORY CLICK ', res);
         });
         setShowSub(true);
@@ -220,23 +221,22 @@ const optionss = [
                                     <label htmlFor="description_field">Description</label>
                                     <textarea className="form-control" id="description_field" rows="8" value={description} onChange={(e) => setDescription(e.target.value)}></textarea>
                                 </div>
+                               
                                 <div>
                              <label> Colors </label>
                              <Select
                             
-                            isMulti
-                           defaultValue={colors}
-                           onChange={setColors}
-                           options={options}
-                           className="basic-multi-select"
-                           classNamePrefix="select"
-  />
-                    
+                             isMulti
+                            defaultValue={colors}
+                            onChange={setColors}
+                            options={options}
+                            className="basic-multi-select"
+                            classNamePrefix="select"
+   />
                              </div> 
                        
 
 
-                         <div >
                          <div >
                              <label> sizes </label>
                              <Select
@@ -249,8 +249,11 @@ const optionss = [
                            classNamePrefix="select"
   />
                              </div> 
-                             </div> 
-                             <div className="form-group">
+      
+
+
+
+                                <div className="form-group">
                                     <label htmlFor="category_field">Category</label>
                                     <select
               name="category"
@@ -262,7 +265,7 @@ const optionss = [
               <option>Please select</option>
               {categories.length > 0 &&
                 categories.map((e) => (
-                  <option key={e._id} value={e.name}>
+                  <option key={e._id} value={e._id}>
                     {e.name}
                   </option>
                 ))}
@@ -274,7 +277,7 @@ const optionss = [
 
 
                              
-                                { showSub && ( <div >
+                           { showSub && ( <div >
                              <label> Sub Category</label>
                             
                              <select
@@ -295,6 +298,10 @@ const optionss = [
 
                              </div> )}
                             
+              
+
+
+
 
                                 <div className="form-group">
                                     <label htmlFor="stock_field">Stock</label>

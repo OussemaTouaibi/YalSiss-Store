@@ -14,8 +14,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cookieParser());
 app.use(fileUpload());
 
-//Setting up config file
-if(process.env.NODE_ENV !== PRODUCTION) require('dotenv').dotenv.config({ path: 'backend/config/config.env' })
+
+
 
 
 

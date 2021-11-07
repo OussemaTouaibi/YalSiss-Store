@@ -21,7 +21,8 @@ const Homepage = () => {
         speed: 500,
         slidesToShow: 5,
         slidesToScroll: 2,
-        cssEase: "linear"
+        cssEase: "linear",
+        
     }
 
     let setting = {
@@ -80,22 +81,23 @@ const Homepage = () => {
            
             <MetaData title={'Buy Best Products Online'} />
             <MediaQuery minWidth={1224}>
-            <div className="title">
-            <h2><Link to= {'/category/vetements-homme'}  style={{color:'black', textDecoration: "underline"}}>Men</Link></h2>
-           </div>
+            <div className="title" style={{border: "1px solid #000" , marginTop:"1rem"}}>
+            <h2><Link to= {'/category/vetements-homme'}  style={{color:'black', fontFamily:"Brush Script MT"}}>Men Clothing</Link></h2>
+          
           
            <Sliderr {...settings}>
            
             {listproducts && listproducts.map( product =>(
-                <div className="card-wrapper" >
+                <div className="card-wrapper"  >
        <ImageSlider key = {product._id}  product = {product} />
        </div>
  ))}
 
     </Sliderr>
-    <div className="title" >
-    <h2><Link to= {'/category/vetements-femme'}  style={{color:'black', textDecoration: "underline"}}>women</Link></h2>
-           </div>
+    </div>
+    <div className="title" style={{border: "1px solid #778899" , marginTop:"1rem"}}>
+    <h2><Link to= {'/category/vetements-femme'}  style={{color:'black', fontFamily:"Brush Script MT"}}>Women Clothing</Link></h2>
+       
           
            <Sliderr {...settings}>
            
@@ -106,11 +108,10 @@ const Homepage = () => {
  ))}
 
     </Sliderr>
+    </div>
+    <div className="title" style={{border: "1px solid #778899" , marginTop:"1rem"}}>
+    <h2><Link to= {'/category/telephones-and-tablettes'}  style={{color:'black', fontFamily:"Brush Script MT"}}>Phones</Link></h2>
 
-    <div className="title">
-    <h2><Link to= {'/category/telephones-and-tablettes'}  style={{color:'black', textDecoration: "underline"}}>Phones</Link></h2>
-
-           </div>
           
            <Sliderr {...settings}>
            
@@ -121,9 +122,11 @@ const Homepage = () => {
  ))}
 
     </Sliderr>
-    <div className="title">
-    <h2><Link to= {'/category/watches'}  style={{color:'black', textDecoration: "underline"}}>Watches</Link></h2>
-           </div>
+    
+    </div>
+    <div className="title" style={{border: "1px solid #778899" , marginTop:"1rem"}}>
+    <h2><Link to= {'/category/watches'}  style={{color:'black', fontFamily:"Brush Script MT"}}>Watches</Link></h2>
+           
           
            <Sliderr {...settings}>
            
@@ -134,10 +137,10 @@ const Homepage = () => {
  ))}
 
     </Sliderr>
-
-    <div className="title">
-    <h2><Link to= {'/category/parfums'}  style={{color:'black', textDecoration: "underline"}}>Parfums</Link></h2>
-           </div>
+    </div>
+    <div className="title" style={{border: "1px solid #778899" , marginTop:"1rem"}}>
+    <h2><Link to= {'/category/parfums'}  style={{color:'black', fontFamily:"Brush Script MT"}}>Parfums</Link></h2>
+           
           
            <Sliderr {...settings}>
            
@@ -148,13 +151,13 @@ const Homepage = () => {
  ))}
 
     </Sliderr>
-
+    </div>
 </MediaQuery>
 
-<MediaQuery maxWidth={1224}>
-<div className="title">
-            <h2><Link to= {'/category/vetements-homme'}  style={{color:'black', textDecoration: "underline"}}>Men</Link></h2>
-           </div>
+<MediaQuery maxWidth={1224} >
+<div className="title"  style={{border: "1px solid #778899" , marginTop:"1rem"}}>
+            <h2><Link to= {'/category/vetements-homme'}  style={{color:'black' , fontSize:"27px", fontFamily:"Brush Script MT"}}>Men Clothing</Link></h2>
+       
           
            <Sliderr {...setting}>
            
@@ -165,9 +168,10 @@ const Homepage = () => {
  ))}
 
     </Sliderr>
-    <div className="title" >
-    <h2><Link to= {'/category/vetements-femme'}  style={{color:'black', textDecoration: "underline"}}>women</Link></h2>
-           </div>
+    </div>
+    <div className="title" style={{border: "1px solid #778899" , marginTop:"1rem"}}>
+    <h2><Link to= {'/category/vetements-femme'}  style={{color:'black' , fontSize:"27px", fontFamily:"Brush Script MT"}}>Women Clothing</Link></h2>
+         
           
            <Sliderr {...setting}>
            
@@ -178,11 +182,11 @@ const Homepage = () => {
  ))}
 
     </Sliderr>
+    </div>
+    <div className="title" style={{border: "1px solid #778899" , marginTop:"1rem"}}>
+    <h2><Link to= {'/category/telephones-and-tablettes'}  style={{color:'black' , fontSize:"27px", fontFamily:"Brush Script MT"}}>Phones</Link></h2>
 
-    <div className="title">
-    <h2><Link to= {'/category/telephones-and-tablettes'}  style={{color:'black', textDecoration: "underline"}}>Phones</Link></h2>
-
-           </div>
+          
           
            <Sliderr {...setting}>
            
@@ -193,9 +197,10 @@ const Homepage = () => {
  ))}
 
     </Sliderr>
-    <div className="title">
-    <h2><Link to= {'/category/watches'}  style={{color:'black', textDecoration: "underline"}}>Watches</Link></h2>
-           </div>
+    </div>
+    <div className="title" style={{border: "1px solid #778899" , marginTop:"1rem"}}>
+    <h2><Link to= {'/category/watches'}  style={{color:'black' , fontSize:"27px", fontFamily:"Brush Script MT"}}>Watches</Link></h2>
+       
           
            <Sliderr {...setting}>
            
@@ -206,10 +211,10 @@ const Homepage = () => {
  ))}
 
     </Sliderr>
-
-    <div className="title">
-    <h2><Link to= {'/category/parfums'}  style={{color:'black', textDecoration: "underline"}}>Parfums</Link></h2>
-           </div>
+    </div>
+    <div className="title" style={{border: "1px solid #778899" , marginTop:"1rem"}}>
+    <h2><Link to= {'/category/parfums'}  style={{color:'black', fontSize:"27px", fontFamily:"Brush Script MT"}}>Parfums</Link></h2>
+        
           
            <Sliderr {...setting}>
            
@@ -220,6 +225,7 @@ const Homepage = () => {
  ))}
 
     </Sliderr>
+    </div>
 </MediaQuery>
     
  

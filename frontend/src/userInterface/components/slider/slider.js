@@ -10,14 +10,14 @@ import "../slider/1.scss"
 
 
 
-const ImageSlider = ({ product, col }) => {
+const ImageSlider = ({ product}) => {
 
    
     return (
 
 
-       
-                <div className="card" key={product.id} style={{height:"300px", backgroundColor:"#e6e6e6"}}>
+                
+                <div className="card" key={product.id} style={{height:"270px", backgroundColor:"#e6e6e6", border: "1px solid #000" }}>
                     <div className="card-image" >
                     <img src={product.images[0].url} />
                     </div>

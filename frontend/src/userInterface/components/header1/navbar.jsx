@@ -116,11 +116,11 @@ const logoutHandler = () => {
                             
                          />
       
-              
+              <div > 
             {SidebarData.map((item, index) => {
               return <SubMenu  item={item} key={index} />;
             })}
-
+            </div>
 <li className='nav-item' style={{marginTop:'20%'}}>
             <Link to ='/' className='nav-links' onClick={closeMobileMenu}>
             Home
@@ -144,24 +144,19 @@ const logoutHandler = () => {
             About Us
             </Link>
             </li>
-            {!loading && (!isAuthenticated || user.role !== 'user') && (
+             </div>
+            </ul>
+            <div style={{marginTop:"0.6rem",marginLeft:"17rem"}}>
+            {!loading && (!isAuthenticated || user.role !== 'user' && user.role !== 'admin') && (
                 <>
-            <li className='nav-item'>
-            <Link to ='/login' className='nav-links' onClick={closeMobileMenu}>
+           
+            <Button> <Link to ='/login'  onClick={closeMobileMenu}>
             Login
             </Link>
-            </li>
-            <li className='nav-item'>
-            <Link to ='/signup' className='nav-links' onClick={closeMobileMenu}>
-            Sign Up
-            </Link>
-            </li>
+            </Button>
             </>
     )}
-             </div>
-             
-            </ul>
- 
+         </div>
         </MediaQuery>
 
 
@@ -239,7 +234,7 @@ const logoutHandler = () => {
                              className="rounded-circle"
                          />
                      </figure>
-                     <span style={{color:"white"}}>{user && user.name}</span>
+                   
                  </Link>
                  <div className="dropdown-menu ml155"  aria-labelledby="dropDownMenuButton" >
                      

@@ -109,7 +109,7 @@ const LogIn = ({ history, location }) => {
                                         Forget Password?
                                   </Link>
                                   <Link to='signup'  className='disc'>
-                                   Do You need an Account ? Click here 
+                                   Sign Up ? Click here 
                                   </Link>
                                 </div>
                             </form>

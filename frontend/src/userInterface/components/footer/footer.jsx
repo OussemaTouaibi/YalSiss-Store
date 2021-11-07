@@ -37,9 +37,9 @@ const Footer = () => {
       <div className="form-outline form-white mb-4">
       <div className="footer-link-items" style={{marginLeft:"5rem"}}>
                         <h3 style={{color: "white", textDecoration: "underline"}}>Social Media</h3>
-                        <Link to=''>Instagram</Link>
-                        <Link to=''>Facebook</Link>
-                        <Link to=''>Youtube</Link>
+                        <Link target="_blank" to={"//www.instagram.com/yalsiss_online_store/"} >Instagram</Link>
+                        <Link target="_blank" to={"//www.facebook.com/YalSiss-108120531666104"} >Facebook</Link>
+                        <Link target="_blank" to={"//www.youtube.com/channel/UCDqGjpHOqlRnFM0w2TtRdug"} >Youtube</Link>
                     </div>
       </div>
       
@@ -73,25 +73,26 @@ const Footer = () => {
                     
                     <Link 
                     className="social-icon-link facebook" 
-                    to='' target='_blank' 
+                    to={"//www.facebook.com/YalSiss-108120531666104"} target='_blank' 
                     aria-label='Facebook'>
                     <i className="fab fa-facebook-f"></i>
             </Link>
 
             <Link 
                     className="social-icon-link instagram" 
-                    to='' target='_blank' 
+                    to={"//www.instagram.com/yalsiss_online_store/"} target='_blank' 
                     aria-label='Instagram'>
                      <i className="fab fa-instagram"></i>
             </Link>
             <Link 
                     className="social-icon-link youtube" 
-                    to='' target='_blank' 
+                    to={"//www.youtube.com/channel/UCDqGjpHOqlRnFM0w2TtRdug"} target='_blank' 
                     aria-label='Youtube'>
                      <i className="fab fa-youtube"></i>
             </Link>
         </div>
- 
+   
+                        
 </div>
 
 </div>

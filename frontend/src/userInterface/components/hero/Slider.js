@@ -3,11 +3,11 @@ import './Slider.scss'
 import BtnSlider from './BtnSlider'
 import dataSlider from './SliderData'
 
-import M1 from '../../../assets/HeroSlider/1.jpg'
-import M2 from '../../../assets/HeroSlider/5.jpg'
-import M3 from '../../../assets/HeroSlider/3.png'
-import M4 from '../../../assets/HeroSlider/7.jpg'
-import M5 from '../../../assets/HeroSlider/img3.jpg'
+import M1 from '../../../assets/HeroSlider/Capture.PNG'
+import M2 from '../../../assets/HeroSlider/Capture1.PNG'
+import M3 from '../../../assets/HeroSlider/Capture2.PNG'
+import M4 from '../../../assets/HeroSlider/Capture3.PNG'
+import M5 from '../../../assets/HeroSlider/Capture4.PNG'
 
 
 

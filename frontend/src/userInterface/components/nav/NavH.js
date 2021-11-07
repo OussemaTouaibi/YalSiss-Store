@@ -24,7 +24,7 @@ props.onSubSelect(sub)
                 <button className="button is-link is-outlined"  onClick={handleSelect}><a href="#"  title={'Jean'} style={{color:"black"}}>Jeans</a></button> 
                 <button className="button is-link is-outlined"  onClick={handleSelect}><a href="#"  title={'Shoes'} style={{color:"black"}}>Shoes</a></button>
                 <button className="button is-link is-outlined"  onClick={handleSelect}><a href="#"  title={'Hoodies'} style={{color:"black"}}>Hoodies</a></button>
-                <button className="button is-link is-outlined"  onClick={handleSelect}><a href="#"  title={'Shirts'} style={{color:"black"}}>Shirts</a></button>
+
                 <button className="button is-link is-outlined"  onClick={handleSelect}><a href="#"  title={'T-shirt'} style={{color:"black"}}>T-shirt</a></button>
                 </ul>
                 <ul className="main-menuz" >

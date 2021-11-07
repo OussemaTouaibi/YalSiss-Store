@@ -17,6 +17,7 @@
   line-height: 65px;
   padding-left: 50px;
   font-size: 18px;
+ 
 }
 
 .contact-info i{
@@ -92,6 +93,13 @@
   transition-property: background;
   margin-bottom: 0.9rem;
 }
+@media screen and (max-width: 950px){
+  .send-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
 
 .contact-form .send-btn:hover{
   background: #003060;
@@ -104,6 +112,7 @@
 
   .contact-info, .contact-form{
     margin: 30px 50px;
+    
   }
 
   .contact-form h2{
@@ -118,4 +127,3 @@
 .ll{
     margin-top: 100%;
 }
-

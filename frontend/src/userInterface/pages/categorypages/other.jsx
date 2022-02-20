@@ -16,7 +16,7 @@ import './homme.scss'
 
 
 
-const Makeup = () => {
+const Other = () => {
 
    
 
@@ -49,7 +49,7 @@ const Makeup = () => {
         
     }
     
-    listProducts = listProducts.filter(product => product.category ===  "612fa3516f5fa653cc033b71" );
+    listProducts = listProducts.filter(product => product.category ===  "61c74e0f4d67570004d67e2e" );
     
     const [list, setList] = useState(listProducts);
     
@@ -73,7 +73,7 @@ const handleSelect = (sub) => {
                  {loading ? <Loader /> : (
             <div>
                 
-
+         
            
         
                
@@ -95,4 +95,4 @@ const handleSelect = (sub) => {
 }
 
 
-export default Makeup
+export default Other

@@ -18,10 +18,10 @@ const Profile = () => {
                 <Fragment>
                     <MetaData title={'Your Profile'} />
 
-                    <h2 className="mt-5 ml-5">My Profile</h2>
+                    <h2 className="mt-5 ml-5"><h2  style={{marginLeft:'5rem'}}>My Profile </h2></h2>
                     <div className="row justify-content-around mt-5 user-info">
                         <div className="col-12 col-md-3">
-                            <figure className='avatar avatar-profile'>
+                            <figure className='avatar avatar-profile'  style={{marginLeft:'5rem'}}>
                                 <img className="rounded-circle img-fluid" src={user.avatar.url} alt={user.name} />
                             </figure>
                             <Link to="/me/update" id="edit_profile" className="btn btn-primary btn-block my-5">
@@ -30,14 +30,14 @@ const Profile = () => {
                         </div>
 
                         <div className="col-12 col-md-5">
-                            <h4>Full Name</h4>
-                            <p>{user.name}</p>
+                            <h4 style={{marginLeft:'1rem'}}>Full Name</h4>
+                            <p style={{marginLeft:'1rem'}}>{user.name}</p>
 
-                            <h4>Email Address</h4>
-                            <p>{user.email}</p>
+                            <h4 style={{marginLeft:'1rem'}}>Email Address</h4>
+                            <p style={{marginLeft:'1rem'}}>{user.email}</p>
 
-                            <h4>Joined On</h4>
-                            <p>{String(user.createdAt).substring(0, 10)}</p>
+                            <h4 style={{marginLeft:'1rem'}}>Joined On</h4>
+                            <p style={{marginLeft:'1rem'}}>{String(user.createdAt).substring(0, 10)}</p>
 
                             {user.role !== 'admin' && (
                                 <Link to="/orders/me" className="btn btn-danger btn-block mt-5">

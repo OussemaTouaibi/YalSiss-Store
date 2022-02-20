@@ -55,7 +55,7 @@ export const SidebarData = [
         cName: 'sub-nav'
       },
       {
-        title: 'Others ...',
+        title: 'Other Electronics',
         path: '/category/others',
         icon: <FaIcons.FaPlus />
       }

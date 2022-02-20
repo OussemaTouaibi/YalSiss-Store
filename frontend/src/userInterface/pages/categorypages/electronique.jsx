@@ -34,7 +34,7 @@ var listProducts = [];
       
 }
 
-listProducts = listProducts.filter(product => product.category ===  "612fa1a56f5fa653cc033b26" );
+listProducts = listProducts.filter(product => product.category ===  "61c74e0f4d67570004d67e2e" );
 //console.log(product.subs)
 //.filter
 

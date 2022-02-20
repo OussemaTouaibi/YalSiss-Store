@@ -59,6 +59,13 @@ import store from './store'
 import Parfums from './userInterface/pages/categorypages/parfums';
 import Watches from './userInterface/pages/categorypages/watches';
 import Phones from './userInterface/pages/categorypages/phones';
+import Kids from './userInterface/pages/categorypages/kids';
+import Comp from './userInterface/pages/categorypages/computer';
+import Other from './userInterface/pages/categorypages/other';
+import Decoration from './userInterface/pages/categorypages/decoration';
+import Meuble from './userInterface/pages/categorypages/meuble';
+import Makeup from './userInterface/pages/categorypages/maquillage';
+import Accessories from './userInterface/pages/categorypages/Acc';
 
 
 
@@ -88,6 +95,20 @@ function App() {
         <Route  path='/category/watches' component={Watches} exact />
         <Route  path='/category/parfums' component={Parfums} exact />
         <Route  path='/category/telephones-and-tablettes' component={Phones} exact />
+        <Route  path='/category/vetements-enfant' component={Kids} exact />
+        <Route  path='/category/ordinateurs-and-tvs' component={Comp} exact />
+        <Route  path='/category/others' component={Other} exact />
+        <Route  path='/category/decoration' component={Decoration} exact />
+        <Route  path='/category/meubles' component={Meuble} exact />
+        <Route  path='/category/maquillages' component={Makeup} exact />
+        <Route  path='/category/accesoires' component={Accessories} exact />
+
+
+
+
+
+
+
 
 
 

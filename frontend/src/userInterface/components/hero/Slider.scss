@@ -9,7 +9,7 @@
 }
 @media screen and (max-width: 700px){
   .container-slider {
-  height: 300px;
+  height: 125px;
   }
 
 }
@@ -38,7 +38,7 @@
   background: #f1f1f1;
   border: 1px solid rgba(34, 34, 34, 0.287);
   position: absolute;
-  display: flex;
+  display: block;
   justify-content: center;
   align-items: center;
   cursor: pointer;
@@ -116,7 +116,7 @@
 
 @media screen and (max-width: 700px){
   .slidea img{
-    height: 300px;
+    height: 125px;
   }
 }
 /*css for manual slide navigation*/

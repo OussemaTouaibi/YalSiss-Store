@@ -9,11 +9,11 @@ import { getAdminProducts } from '../../../actions/productActions'
 
 
 import './homme.scss'
+import NavM from '../../components/nav/NavM';
 
 
 
-
-const Decoration = () => {
+const Meuble = () => {
 
    
 
@@ -34,7 +34,7 @@ var listProducts = [];
       
 }
 
-listProducts = listProducts.filter(product => product.category ===  "612fa2376f5fa653cc033b45" );
+listProducts = listProducts.filter(product => product.category ===  "612fa1f36f5fa653cc033b30" );
 //console.log(product.subs)
 //.filter
 
@@ -87,12 +87,12 @@ const handleSelect = (sub) => {
 
     return (
         <Layout>
+            <NavM onSubSelect={handleSelect} />
            
-           
-    
+        
     
    <div className="main_content">
-  
+
              {list   && list.map( product =>(
        <Product2 key = {product._id}  product = {product} />
 
@@ -107,4 +107,4 @@ const handleSelect = (sub) => {
 }
 
 
-export default Decoration
+export default Meuble

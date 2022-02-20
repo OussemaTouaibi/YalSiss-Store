@@ -13,10 +13,10 @@ import { getAdminProducts } from '../../../actions/productActions'
 
 import './homme.scss'
 
+import NavC from '../../components/nav/NavC';
 
 
-
-const Makeup = () => {
+const Comp = () => {
 
    
 
@@ -49,7 +49,7 @@ const Makeup = () => {
         
     }
     
-    listProducts = listProducts.filter(product => product.category ===  "612fa3516f5fa653cc033b71" );
+    listProducts = listProducts.filter(product => product.category ===  "61c74c354d67570004d67dc9" );
     
     const [list, setList] = useState(listProducts);
     
@@ -73,7 +73,9 @@ const handleSelect = (sub) => {
                  {loading ? <Loader /> : (
             <div>
                 
-
+            <NavC onSubSelect={handleSelect} />
+           
+  
            
         
                
@@ -95,4 +97,4 @@ const handleSelect = (sub) => {
 }
 
 
-export default Makeup
+export default Comp

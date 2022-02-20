@@ -14,50 +14,33 @@ const  NavM= (props) => {
   }
 
     return (
-        <Fragment>
+      
+<Fragment>
+           <div>
 
-<div className="headerz" data-sticky="true">
-      <div className="headerz__top">
-        <div className="ps-container">
+<div className="" data-sticky="true">
+ <nav className="">
+  <ul className="main-menuz" >
 
-                      <nav className="navigation">
-       
-              <ul className="main-menuz menuz">
-               
+    <button className="button is-link is-outlined"  onClick={handleSelect}><a href="#"  title={'living'} style={{color:"black"}}>Living Room</a></button> 
+    <button className="button is-link is-outlined"  onClick={handleSelect}><a href="#"  title={'bedroom'} style={{color:"black"}}>Bedroom</a></button>
+    <button className="button is-link is-outlined"  onClick={handleSelect}><a href="#"  title={'kitchen'} style={{color:"black"}}>Kitchen</a></button>
+    </ul>
+    <ul className="main-menuz" >
+    <button className="button is-link is-outlined"  onClick={handleSelect}><a href="#"  title={'bathroom'} style={{color:"black"}}>Bathroom</a></button>
+    <button className="button is-link is-outlined"  onClick={handleSelect}><a href="#"  title={'dining'} style={{color:"black"}}>Dining Room</a></button>
+    <button className="button is-link is-outlined"  onClick={handleSelect}><a href="#"  title={'office'} style={{color:"black"}}>Office</a></button>
+   
+    </ul>
 
-                <ul className="main-menuz menuz">
-                <li className="current-menuz-item menuz-item-has-children" onClick={handleSelect} ><a href="" title={'Living Room'}>Living Room</a>
-                </li>
-                </ul>
-
-                <ul className="main-menuz menuz">
-                <li className="current-menuz-item menuz-item-has-children" onClick={handleSelect} ><a href="" title={'Bedroom'}>Bedroom </a>
-                </li>
-                </ul>
-             
-                <ul className="main-menuz menuz">
-                <li className="current-menuz-item menuz-item-has-children" onClick={handleSelect} ><a href="" title={'Kitchen'}>Kitchen</a>
-                </li>
-                </ul>
-
-                <ul className="main-menuz menuz">
-                <li className="current-menuz-item menuz-item-has-children" onClick={handleSelect} ><a href="" title={'Bathroom'}>Bathroom</a>
-                </li>
-                </ul>
-
-                <ul className="main-menuz menuz">
-                <li className="current-menuz-item menuz-item-has-children" onClick={handleSelect} ><a href="" title={'Dining Room'}>Dining Room </a>
-                </li>
-                </ul>
-
-                </ul>
-                    </nav>
-                    </div>
-                    </div>
-                    </div>
-                            
   
+      </nav>
+      </div>
+      </div>
+
+
               </Fragment>
+
     )
 }
 

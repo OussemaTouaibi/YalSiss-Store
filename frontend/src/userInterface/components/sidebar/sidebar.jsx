@@ -25,7 +25,16 @@ const Nav = styled.div`
 `;
 
 const NavIcon = styled(Link)`
-  margin-right: 25rem;
+
+  font-size: 1.7rem;
+  height: 80px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  
+`;
+const NavIconn = styled(Link)`
+  margin-left: 9rem;
   font-size: 1.7rem;
   height: 80px;
   display: flex;
@@ -81,13 +90,14 @@ const Sidebar = () => {
     
       <IconContext.Provider value={{ color: '#fff' }}>
         <Nav>
-          
-          <NavIcon to='#'>
+        <MediaQuery minWidth={1224}>
+          <NavIconn to='#'>
             <FaIcons.FaBars onClick={showSidebar}  />
-          </NavIcon>
+          </NavIconn>
+          </MediaQuery>
 
           <MediaQuery minWidth={1224}>
-          <div className="col-12 col-md-6 mt-2 mt-md-0">
+          <div className="col-12 col-md-6 mt-2 mt-md-0"style={{marginLeft:"17rem"}}>
 
     <Route render={({ history }) => <Search history={history} /> } />
 
@@ -96,7 +106,7 @@ const Sidebar = () => {
             </MediaQuery>
           
           <MediaQuery maxWidth={1224}>
-          <div className="col-12 col-md-6 mt-2 mt-md-0"  style={{marginRight:"29rem"}}>
+          <div className="col-12 col-md-6 mt-2 mt-md-0"  style={{marginLeft:"-4rem"}}>
 
         <Route render={({ history }) => <Search history={history} /> } />
 
@@ -122,7 +132,7 @@ const Sidebar = () => {
             <ul className="navbarr__links">
               
                 <li>
-                    <Link to="/cart" style= {{ textDecoration : 'none' , marginRight:'0.6rem'}} className="cart__link">
+                    <Link to="/cart" style= {{ textDecoration : 'none' , marginRight:'7rem'}} className="cart__link">
                         <i className="fas fa-shopping-cart"></i>
                     Panier
                     <span className="cartlogo__badge">{cartItems.length}</span>
@@ -138,22 +148,26 @@ const Sidebar = () => {
         </Nav>
 
         <MediaQuery minWidth={1224}>
-
+   
         <SidebarNav sidebar={sidebar}>
           <SidebarWrap>
+       
             <NavIcon to='#'>
+             
               <AiIcons.AiOutlineClose onClick={showSidebar}/>
+            
             </NavIcon>
             {SidebarData.map((item, index) => {
               return <SubMenu  item={item} key={index}/>;
             })}
 
 
-            
+
        
           </SidebarWrap>
           
         </SidebarNav>
+       
         </MediaQuery>
 
         <MediaQuery minWidth={1224}>

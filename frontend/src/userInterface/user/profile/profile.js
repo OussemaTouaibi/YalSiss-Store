@@ -18,7 +18,7 @@ const Profile = () => {
                 <Fragment>
                     <MetaData title={'Your Profile'} />
 
-                    <h2 className="mt-5 ml-5"><h2  style={{marginLeft:'5rem'}}>My Profile </h2></h2>
+                    <h2 className="mt-5 ml-5" ><h2  style={{marginLeft:'5rem'}}>My Profile </h2></h2>
                     <div className="row justify-content-around mt-5 user-info">
                         <div className="col-12 col-md-3">
                             <figure className='avatar avatar-profile'  style={{marginLeft:'5rem'}}>
